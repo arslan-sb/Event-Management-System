@@ -19,7 +19,9 @@ public:
 	void setParticipants(int participants) { this->participants = participants; }
 	int getParticipants() { return participants; }
 	void display() {
-
+		cout << "Name: " << name << endl;
+		cout << "Event ID: " << ID << endl;
+		cout << "Number of Participants: " << participants << endl;
 	}
 
 };
