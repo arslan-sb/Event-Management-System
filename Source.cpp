@@ -1,17 +1,16 @@
 #include <iostream>
-#include "Event.h"
-#include "Date.h"
-#include "Time.h"
-
+#include "Event class/Event.h"
+#include "Utitily Classes/Date.h"
+#include "Utitily Classes/Time.h"
 using namespace std;
 
 
 
 int main()
 {
+	Event a;
 
-
-
+	Event b;
 
 	return 0;
 }
