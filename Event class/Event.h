@@ -17,8 +17,10 @@ public:
 	Event() :name(), ID(0), participants(0), heldOn(), startTime() {}
 	Event(string n, Date held, Time start, int id, int part) :name(n), heldOn(held), startTime(start), ID(id), participants(part) {}
 	void setName(string n) { this->name = n; }
-
 	string getName() { return name; }
+	void setHeldOn(Date held) { this->heldOn = held; }
+	Date getHeldOn() { return heldOn; }
+	void setStartTime(Time start) { this->startTime = start; }
 	void setID(int ID) { this->ID = ID; }
 	int getID() { return ID; }
 	void setParticipants(int participants) { this->participants = participants; }
