@@ -25,10 +25,31 @@ public:
 	int getID() { return ID; }
 	void setParticipants(int participants) { this->participants = participants; }
 	int getParticipants() { return participants; }
-	void display() {
+	virtual int calculateBill() = 0;
+	virtual void setDetails() = 0 {
+		string n;
+		int id, participants;
+		cin.ignore();
+		cout << "Name: ";
+		getline(cin, n);
+		setName(n);
+		heldOn.setData();
+		startTime.setData();
+		cout << "ID: ";
+		cin >> id;
+		setID(id);
+		cout << "No of Participants: ";
+		cin >> participants;
+		setParticipants(participants);
+	}
+
+	virtual void display() = 0
+	{
 		cout << "Name: " << name << endl;
 		cout << "Event ID: " << ID << endl;
 		cout << "Number of Participants: " << participants << endl;
+		cout << "Scheduled for: "; heldOn.display();
+		cout << "Start Time: "; startTime.showTime();
 	}
 
 };
