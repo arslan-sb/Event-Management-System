@@ -6,8 +6,6 @@
 #include "Utitily Classes/Time.h"
 using namespace std;
 
-
-
 int main()
 {
 	Event* e;
