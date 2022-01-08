@@ -36,7 +36,7 @@ public:
 		return result;
 	}
 	void display() {
-		cout << "Entry Test Details are: ";
+		cout << "Entry Test Details are: " << endl;
 		Event::display();
 		cout << "Cost per person: " << costPerPerson << endl;
 		cout << "Hall Charges: " << hallCharges << endl;
