@@ -34,7 +34,7 @@ public:
 		if (y < 1990) {
 			cout << "Error! Enter year again: ";
 			cin >> y;
-			setMonth(y);
+			setYear(y);
 		}
 		else
 			year = y;

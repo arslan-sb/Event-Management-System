@@ -44,6 +44,7 @@ int main()
 		cout << "Do you want to enter data for another event: 'y' / 'n'  " << endl;
 		cin >> again;
 	} while (again == 'y' || again == 'Y' && index < 50);
+
 	system("CLS");
 	for (int i = 0; i < index; i++)
 	{
