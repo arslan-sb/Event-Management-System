@@ -6,6 +6,7 @@
 using namespace std;
 
 //Event Class Function Definitions
+//Event Class constructors
 Event::Event() 
 	:name(), ID(0), participants(0), heldOn(), startTime() {}
 Event::Event(string n, Date held, Time start, int id, int part) 

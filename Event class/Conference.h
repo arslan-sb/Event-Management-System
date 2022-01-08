@@ -11,38 +11,17 @@ private:
 	int days;
 	int ratePerDay;
 public:
-	Conference() :Event(), days(0), ratePerDay(0) {}
-	Conference(string n, Date held, Time start, int id, int part, int days, int rate) :
-		Event(n, held, start, id, part), days(days), ratePerDay(rate) {}
-	void setDays(int days) { this->days = days; }
-	int getDays() { return days; }
-	void setRatePerDay(int rate) { this->ratePerDay = rate; }
-	int getRatePerDay() { return ratePerDay; }
-
-	void setDetails() {
-		cout << "Please give Conference event details" << endl;
-		Event::setDetails();
-		int days, rate;
-		cout << "Number of days: ";
-		cin >> days;
-		setDays(days);
-		cout << "Rate Per Day: ";
-		cin >> rate;
-		setRatePerDay(rate);
-	}
-	int calculateBill()
-	{
-		int result;
-		result = ratePerDay * days;
-		return result;
-	}
-
-	void display() {
-		cout << "Conference Details are:" << endl;
-		Event::display();
-		cout << "Number of Days:	" << days << endl;
-		cout << "Per Day Cost:	" << ratePerDay << endl;
-	}
-
+	//Function Prototypes of class
+	Conference(); //Default Constructor
+	Conference(string , Date , Time , int , int , int , int ); //parameterized Constructor
+	//getters and setters of data members
+	void setDays(int );
+	int getDays();
+	void setRatePerDay(int );
+	int getRatePerDay();
+	//***********************
+	void setDetails(); //setting value of data members and parent class
+	int calculateBill(); //calculating bill of conference event by differnt formula
+	void display();  //Printing details of members
 };
 
