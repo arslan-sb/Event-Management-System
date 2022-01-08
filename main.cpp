@@ -6,22 +6,36 @@
 #include "Utitily Classes/Time.h"
 using namespace std;
 
+
+
 int main()
 {
-	Event* e;
-	Event* c;
-	e = new EntryTest;
-	e->setDetails();
-	system("CLS");
-	c = new Conference;
-	c->setDetails();
-	system("CLS");
-	e->display();
-	cout << "Total billed ammount: " << e->calculateBill() << endl << endl;
-	c->display();
-	cout << "Total billed ammount: " << c->calculateBill() << endl << endl;
+	
+	Event* arr[50]; //can enter the data of 50 different events
 
-	delete e, c;
+	char again;
+	int index = 0;
+	do
+	{
+		int choice;
+		cout << "Select \n1 for Conference event\n2 for Entry test event" << endl;
+		cin >> choice;
+		switch (choice)
+		{
+		case 1:
+			arr[index] = new Conference;
+			arr[index]->setDetails();
+			break;
+		case 2:
+		default:
+			break;
+		}
+
+		cout << "Do you want to enter data for another event: 'y' / 'n'  " << endl;
+		cin >> again;
+	} while (again == 'y' || again == 'Y' && index < 50);
+	
+	delete[] arr;
 	system("pause");
 	return 0;
 }
