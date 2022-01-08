@@ -38,7 +38,7 @@ public:
 	}
 
 	void display() {
-		cout << "Coference Details are: " << endl;
+		cout << "Conference Details are: " << endl;
 		Event::display();
 		cout << "Number of Days: " << days << endl;
 		cout << "Per Day Cost: " << ratePerDay << endl;
