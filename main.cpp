@@ -9,8 +9,7 @@ using namespace std;
 
 int main()
 {
-	
-	Event* arr[50]; //can enter the data of 50 different events
+	Event* arr[50]; //User can enter the data of 50 different events
 
 	char again;
 	int index = 0;
@@ -45,7 +44,8 @@ int main()
 		cin >> again;
 	} while (again == 'y' || again == 'Y' && index < 50);
 
-	system("CLS");
+	//*******************************************
+	system("CLS");  //Clearing Screen
 	for (int i = 0; i < index; i++)
 	{
 		arr[i]->display();

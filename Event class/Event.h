@@ -7,28 +7,33 @@ using namespace std;
 
 class Event {
 protected:
+	//Data Members that can be shared with Child Classes
 	string name;
 	Date heldOn;
 	Time startTime;
 	int ID;
 	int participants;
-
 public:
-	Event();
-	Event(string n, Date held, Time start, int id, int part);
-	void setName(string n);
+	//Event Class Function prototypes
+	Event(); //Default Constructor
+	Event(string , Date , Time , int , int ); //Paramerterized Constructor
+	//***************************
+	//Getters and setters of Data Members
+	void setName(string );
 	string getName();
-	void setHeldOn(Date held);
+	void setHeldOn(Date );
 	Date getHeldOn();
-	void setStartTime(Time start);
-	void setID(int ID);
+	void setStartTime(Time );
+	void setID(int );
 	int getID();
-	void setParticipants(int participants);
+	void setParticipants(int );
 	int getParticipants();
-	virtual int calculateBill() = 0;
+	//**********************
+	//Pure Virtual function for Child classes to calculate bill
+	virtual int calculateBill() = 0; 
+	//Lookup function To search for details of a specific event in array
 	void lookup(Event* arr[], int index );
+	//Pure virtual set details for child classes
 	virtual void setDetails() = 0;
-
 	virtual void display() = 0;
-
 };
